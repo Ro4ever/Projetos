@@ -43,18 +43,16 @@ public class desafio08 {
             {
                 for(int j=0; j<4; j++)
                 {
-                    primaria[i] = matrix[i][j] / valorInformado1;
+                    primaria[i] = matrix[i][j] % valorInformado1;
                     i++;
                 }
             }
             for(int i=0; i<4; i++)
             {
-                for(int j=0; j<4; j++)
-                {
-                    secundaria[i] = matrix[i][3 - i] * valorInformado2;
-                }
+                secundaria[i] = matrix[i][3 - i] * valorInformado2;
             }
-            System.out.println("Valores da divisão primária: ");
+
+            System.out.println("Va1lores da divisão primária: ");
             for(int i=0; i<4; i++)
             {
                 System.out.print(primaria[i] + " ");
