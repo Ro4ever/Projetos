@@ -9,7 +9,6 @@ public class desafio06 {
         int[][] matrix = new int[4][4];
         int[][] matrix2 = new int[4][4];
         int contador = 0;
-        int[][] iguais = new int[4][4];
 
         for(int i=0; i<4; i++)
         {
@@ -25,24 +24,25 @@ public class desafio06 {
             {
                 System.out.println("Informe os valores da 2ª matrix:");
                 matrix2[i][j] = scan.nextInt();
-
-                if(matrix[i][j] == matrix2[i][j])
-                {
-                    contador++;
-                    iguais[i][j] = matrix2[i][j];
-                }
             }
         }
-        System.out.println("Repetidos: " + contador);
         for(int i=0; i<4; i++)
         {
             for(int j=0; j<4; j++)
             {
-                if(iguais[i][j] > 0)
+                for(int x=0; x<4; x++)
                 {
-                    System.out.println("Valores repetidos: " + iguais[i][j]);
+                    for(int y=0; y<4; y++)
+                    {
+                        if(matrix[i][j] == matrix2[x][y])
+                        {
+                            contador++;
+                            break;
+                        }
+                    }
                 }
             }
         }
+        System.out.println("Quantidades repetidos: " + contador);
     }
 }
