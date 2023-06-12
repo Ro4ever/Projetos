@@ -52,7 +52,7 @@ public class desafio08 {
                 secundaria[i] = matrix[i][3 - i] * valorInformado2;
             }
 
-            System.out.println("Va1lores da divisão primária: ");
+            System.out.println("Valores da divisão primária: ");
             for(int i=0; i<4; i++)
             {
                 System.out.print(primaria[i] + " ");
